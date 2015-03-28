@@ -1,0 +1,13 @@
+# Proyecto Final del Curso ProgramaciOn Concurrente
+## Profesora: Graciela RomAn Alonso
+
+Hacer un programa concurrente para controlar las plumas automAticas de entrada/salida de un estacionamiento.
+Se tiene un estacionamiento con capacidad para N=24 coches, cuyo acceso se realiza a travEs de P plumass de entrada y Q plumas de salida.
+Se tienen de la pluma E0 a la E(p-1) y de la pluma S0 a la S(q-1) para las entradas y salidas respectivamente.
+Proponer el comportamiento de las tareas pluma de entrada E(i), pluma de salida S(i) y del Automovil(i) con las restricciones;
+Las plumas de entrada sOlo abren paso cuando llega un automovil y estrictamente si el estacionamiento cuenta con plazas disponibles, de otro modo permanecen cerradas, al igual que las plumas de salida que sOlo abren cuando un automovil quiere salir.
+Para el caso en que se encuentre lleno el estacionamiento, los autos que lleguen deben esperar que se libere un lugar al salir otro automovil.
+El comportamiento de un Automovil incluye la elecciOn aleatoria de una pluma Ei para entrar, la elecciOn aleatoria de una localidad para estacionarse y la elecciOn aleatoria de una salida Si para irse luego de que estuvo estacionado un tiempo aleatorio.
+El nUmero de lugares de
+
+
