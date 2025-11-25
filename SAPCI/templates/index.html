@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SAPCI MAC</title>
+    <link rel="stylesheet" href="../static/css/styles.css" />
+
+</head>
+<body>
+    <header class="navbar">
+        <div class="navbar_logo" alt="Logo de CDMX">
+            <img src="../static/img.png" alt="">SAPCI MAC
+        </div>
+        <ul class="navbar_navegacion">
+            <li class="navbar_navegacion_item"><a href="https://sapci.cdmx.gob.mx/" class="navbar_link">SAPCI</a></li>
+            <li class="navbar_navegacion_item"><a href="#" class="navbar_link">Calendario</a></li>
+        </ul>
+    </header>
+
+    <main class="main">
+        <section>
+            <h2>Programas SAPCI</h2>
+            <form class="form" method="POST">
+                <p class="form_input">
+                    <label for= "titulo" class="form_label">Programa: </label>
+                    <input type="text" name="tit" id="titulo" class="title">
+                </p>
+                <p class="form_input">
+                    <label for="entry" class="form_label">Solicitante: </label>
+                    <textarea name="content" id="entry" class="form_textarea"></textarea>
+                </p>
+
+                <button type="submit" class="form_submit">Agregar</button>
+            </form>
+        </section>
+
+        <section>
+            <h2>Lista de Solicitantes</h2>
+            <article class="entry">
+                <div>
+                    <h3 class="entry_title">
+                        Desde la cuna
+                    </h3>
+                    <time datetime="25-09-2023" class="entry_date">* 25-09-2023</time>
+                </div>
+                <p class="entry_content">
+                    Juan Pérez, 1 año y 3 meses, con domicilio en La Magdalena Contreras, etc...
+                </p>
+            </article>
+            
+            {% for entrada in entradas %}
+            <article class="entry">
+                <div>
+                    <h3 class="entry_title">
+                        {{entrada.titulo}}
+                    </h3>
+                    <time datetime={{entrada.fecha}} class="entry_date">* {{entrada.fecha}}</time>
+                </div>
+                <p class="entry_content">
+                    {{entrada.contenido}}
+                </p>
+            </article>
+            {% endfor %}
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer_content">
+            <section class="left">
+                <a class="footer_item">Creada por SAPCI MAC</a>
+                <a class="footer_item">Revisa los Programas</a>
+
+            </section>
+            <section class="rigth">
+                <div class="footer_column">
+                    <a class="footer_item">SAPCI</a>
+                    <a class="footer_item">Calendario</a>
+                </div>
+                <div class="footer_column">
+                    <a class="footer_item">Acerca de</a>
+                    <a class="footer_item">CDMX</a>
+                </div>
+
+            </section>
+
+        </div>
+
+
+    </footer>
+
+</body>
+</html>

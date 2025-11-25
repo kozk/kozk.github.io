@@ -1,0 +1,13 @@
+{% for entrada in entradas %}
+            <article class="entry">
+                <div>
+                    <h3 class="entry_program">
+                        {{entrada.solicitante}}
+                    </h3>
+                    <time datetime={entrada.fecha} class="entry_date">* {{entrada.fecha}}</time>
+                </div>
+                <p class="entry_content">
+                    {{entrada.contenido}}
+                </p>
+            </article>
+            {% endfor %}
